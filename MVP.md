@@ -10,7 +10,7 @@
   To make Pokemon info searchable and easy to use.
   4. Identify and prioritize essential user stories (limit this to 3 or fewer)?
   a. As a user I don't know what Pokemon I need to use.
-  b. As a user, I need to know stats of various pokemon to build an awesome team.
+  b. As a user, I need to know stats of various pokemon to build a winning team.
   5. What is the general idea of your project?
   Searchable, interactive Pokemon database.
 
