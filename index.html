@@ -10,15 +10,29 @@
 </head>
 <body>
     <div class="container">
-        <div class="navbar-fixed">
-            <nav class="transparent">
-                <div class="nav-wrapper">
-                    <img src="assets/images/blue-ball.png">
-                    <img src="assets/images/red-ball.png">
-                    <img src="assets/images/yellow-ball.png">
-                    <img src="assets/images/green-ball.png">
-                </div>
-            </nav>
+        <div class="row">
+            <div class="col s1">
+                <img src="assets/images/blue-ball.png" id="bball">
+            </div>
+            <div class="col s2">
+                <img src="assets/images/red-ball.png" id="balls">
+                <img src="assets/images/yellow-ball.png" id="balls">
+                <img src="assets/images/green-ball.png" id="balls">
+            </div>
+            <div class="col s5">     
+                <nav class="transparent">
+                    <div class="nav-wrapper">
+                            <form>
+                                <div class="input-field inline">
+                                    <input id="search" type="text">
+                                    <label for="search"></label>
+                                </div>
+                            </form>
+                    <button class="btn waves-effect waves-light inline" type="submit" name="action">Submit</button>
+                    </div>
+                </nav>
+            </div>
+            
         </div>
     </div>
 
