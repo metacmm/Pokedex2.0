@@ -1,3 +1,6 @@
+$(document).ready(function(){
+    $("#btn-submit").on("click", searchpokemon);
+});
 // Your web app's Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyAnlHqemY5Db2LGI5WeKrQtxAxyf4pXB0o",
