@@ -20,7 +20,7 @@ body{
     margin-right: 5px;
 }
 
-@media (min-width: 767.98px){
+@media (min-width: 980px){
     #pokesearch{
         width: 500px;
     }
