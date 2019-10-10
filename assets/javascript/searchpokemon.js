@@ -1,5 +1,6 @@
 function searchpokemon(){
-    var searchText = $("#search").val().trim();
+    event.preventDefault();
+    var searchText = $("#pokesearch").val().trim();
     var requestUrl = "https://pokeapi.co/api/v2/pokemon/" + searchText + "/";
     $.ajax({
         url: requestUrl,
