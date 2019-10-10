@@ -18,3 +18,8 @@ body{
 #bball{
     padding-top: 20px;
 }
+
+#pokesearch{
+    width: 500px;
+    margin-right: 5px;
+}
