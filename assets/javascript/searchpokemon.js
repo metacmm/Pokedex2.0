@@ -7,6 +7,7 @@ function searchpokemon(){
         method: "GET"
     }).then(function(response){
         console.log(response);
+        displayPokemon(response);
     })
 
 }
