@@ -23,6 +23,9 @@
     <script src="assets/javascript/app.js"></script>
     <script src="assets/javascript/searchpokemon.js"></script>
     <script src="assets/javascript/displayPokemon.js"></script>
+    <script src="assets/javascript/autocomplete.js"></script>
+    <script src="assets/javascript/pokemons.js"></script>
+    <script src="assets/javascript/getrecommendation.js"></script>
 
     <title>Pokedex 2.0!</title>
 </head>
@@ -39,8 +42,10 @@
             </div>
             <div class="col-8">     
                 <nav class="navbar bg-transparent">
-                    <form class="form-inline">
-                        <input class="form-control" type="search" placeholder="I choose you!" aria-label="Search" id="pokesearch">
+                    <form class="form-inline" autocomplete="off">
+                        <div id="autocomplete">
+                            <input class="form-control" type="search" placeholder="I choose you!" aria-label="Search" id="pokesearch">
+                        </div>
                         <button class="btn" type="submit" id="btn-submit"><img src="assets/images/pokeball.png"></button>
                     </form>
       
