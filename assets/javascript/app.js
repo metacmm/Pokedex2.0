@@ -1,5 +1,6 @@
 $(document).ready(function(){
     $("#btn-submit").on("click", searchpokemon);
+    $("#pokesearch").on("input",autocomplete);
 });
 // Your web app's Firebase configuration
 var firebaseConfig = {
