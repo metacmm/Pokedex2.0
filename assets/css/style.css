@@ -35,13 +35,13 @@ body{
 #stats{
     height: 250px;
     width: 250px;
+    color: yellow;
 }
 
 .border-right { 
     border-width: 5px !important; 
     border-color: gray !important;
 }
-
 
 @media (min-width: 980px){
     #pokesearch{
