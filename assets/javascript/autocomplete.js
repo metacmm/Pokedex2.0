@@ -6,6 +6,7 @@ function autocomplete() {
         return false;
     }
     var a = $("<ul>");
+    
     a.attr("id", this.id + "autocomplete-list");
     a.addClass("autocomplete-items p-0");
     $(this).parent().append(a);

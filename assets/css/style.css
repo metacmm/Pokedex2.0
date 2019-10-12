@@ -41,4 +41,8 @@ body{
     #pokesearch{
         width: 500px;
     }
+.autocomplete-items{
+    max-height: 300px;
+    overflow: auto;
+    
 }
