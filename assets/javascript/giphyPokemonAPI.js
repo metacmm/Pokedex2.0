@@ -1,6 +1,6 @@
 var searchText = "";
 
-function displayPokemonGif() {
+function displayPokemonGif(){
     $("#gifs-view").empty();
 };
 
@@ -16,7 +16,7 @@ function requestingPokemonGif(button){
         url: queryURL,
         method: "GET",
     })
-    .then(function(response) {
+    .then(function(response){
         console.log(queryURL);
         console.log(response);
 
@@ -35,7 +35,7 @@ function showPokemonGif(){
             var selectedPokemon = $("<img>");
 
             selectedPokemon.attr("src", gifURL);
-            gifDiv.append(selectedPokemon, p);
+            gifDiv.append(selectedPokemon);
 
             $("#gifs-view").prepend(gifDiv);
         }
