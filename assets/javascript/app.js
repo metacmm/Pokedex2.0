@@ -1,5 +1,6 @@
 $(document).ready(function(){
     $("#btn-submit").on("click", searchpokemon);
+    $("#btn-submit").on("click", requestingPokemonGif);
     $("#pokesearch").on("input",autocomplete);
     $(".balls").on("click", function() {
         window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
