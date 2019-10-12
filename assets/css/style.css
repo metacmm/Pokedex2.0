@@ -20,3 +20,9 @@ body{
     width: 500px;
     margin-right: 5px;
 }
+
+.autocomplete-items{
+    max-height: 300px;
+    overflow: auto;
+    
+}
