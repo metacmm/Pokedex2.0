@@ -48,11 +48,8 @@ body{
         width: 500px;
     }
 }
+
 .autocomplete-items{
     max-height: 300px;
     overflow: auto;
-<<<<<<< HEAD
-    }
-=======
->>>>>>> 0aecda7a38a82f5e9c68ba3b831382f99736f176
 }
