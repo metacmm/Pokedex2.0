@@ -11,24 +11,24 @@ function requestingPokemonGif(){
 
         var pokemonGifResults = response.data;
         console.log(pokemonGifResults);
+        $("#gifs").empty();
         showPokemonGif();
-    });
-};
+
+        function showPokemonGif() {
+            for (var i = 0; i < pokemonGifResults.length; i++) {
+                
+                    var gifDiv = $("<div>");
 
 
-function showPokemonGif(){
-    for (var i = 0; i < pokemonGifResults.length; i++){
-        if (pokemonGifResults[i].rating !== "r") {
-            var gifDiv = $("<div>");
+                    var gifURL = pokemonGifResults[i].images.fixed_height.url;
+                    var selectedPokemon = $("<img>");
+
+                    selectedPokemon.attr("src", gifURL);
+                    gifDiv.append(selectedPokemon);
+                    
+                    $("#gifs").prepend(gifDiv);
             
-
-            var gifURL = pokemonGifResults[i].images.fixed_height.url;
-            var selectedPokemon = $("<img>");
-
-            selectedPokemon.attr("src", gifURL);
-            gifDiv.append(selectedPokemon);
-            $("#gifs").empty();
-            $("#gifs").prepend(gifDiv);
-        }
-    };
+            };
+        };
+    });
 };
