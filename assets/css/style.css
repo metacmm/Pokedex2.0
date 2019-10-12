@@ -20,6 +20,12 @@ body{
     margin-right: 5px;
 }
 
+
+.btn:active, .btn:focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 #sprite{
     height: 250px;
     width: 250px;
@@ -41,8 +47,12 @@ body{
     #pokesearch{
         width: 500px;
     }
+}
 .autocomplete-items{
     max-height: 300px;
     overflow: auto;
+<<<<<<< HEAD
     }
+=======
+>>>>>>> 0aecda7a38a82f5e9c68ba3b831382f99736f176
 }
