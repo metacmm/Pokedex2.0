@@ -1,11 +1,10 @@
-
 function requestingPokemonGif(){
     var searchText = $("#pokesearch").val().trim();
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchText + "&api_key=fAd8nhiRNR2VtraFeMkS7t2FaNyqITEclimit=4";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=Bk5QuTfcpPza5xYFYcMKbn1rl0kIDzw6&q=" + searchText + "&limit=4";
 
     $.ajax({
         url: queryURL,
-        method: "GET",
+        method: "GET"
     })
     .then(function(response){
         console.log(response);
