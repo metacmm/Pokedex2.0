@@ -28,7 +28,7 @@ body{
 
 #stats{
     height: 250px;
-    width: auto;
+    width: 250px;
 }
 
 .border-right { 
@@ -44,5 +44,5 @@ body{
 .autocomplete-items{
     max-height: 300px;
     overflow: auto;
-    
+    }
 }
