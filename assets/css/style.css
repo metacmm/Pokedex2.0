@@ -7,7 +7,7 @@ body{
     padding-top: 5px;
 }
 
-#balls{
+.balls{
     padding-left: 20px;
     padding-right: 10px;
 }
@@ -17,10 +17,30 @@ body{
 }
 
 #pokesearch{
-    width: 500px;
     margin-right: 5px;
 }
 
+#sprite{
+    height: 250px;
+    width: 250px;
+    background-color: rgba(245, 245, 245, 0.774);
+}
+
+#stats{
+    height: 250px;
+    width: auto;
+}
+
+.border-right { 
+    border-width: 5px !important; 
+    border-color: gray !important;
+}
+
+
+@media (min-width: 980px){
+    #pokesearch{
+        width: 500px;
+    }
 .autocomplete-items{
     max-height: 300px;
     overflow: auto;
