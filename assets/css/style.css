@@ -36,9 +36,8 @@ body{
 }
 
 #stats{
-    height: auto;
-    width: 250px;
-    color: yellow;
+    height: 400px;
+    width: 400px;
 }
 
 .border-right { 
