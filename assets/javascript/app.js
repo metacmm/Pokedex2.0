@@ -1,11 +1,18 @@
 $(document).ready(function(){
-    getPokemonNames();
-    $("#btn-submit").on("click", searchpokemon);
+    // When submit button is clicked, send API call to pokeapi and giphy then clear the input value
+    $("#btn-submit").on("click", function () {
+        searchpokemon();
+        $("#pokesearch").val("");
+    });
+
+    // When a user begins to type in the input element, use autocomplete
     $("#pokesearch").on("input",autocomplete);
+
     $(".balls").on("click", function() {
         window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
     })
 });
+
 // Your web app's Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyAnlHqemY5Db2LGI5WeKrQtxAxyf4pXB0o",
