@@ -22,6 +22,9 @@
     <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
 
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
     <!-- Person Javascript -->
     <script src="assets/javascript/app.js"></script>
     <script src="assets/javascript/searchpokemon.js"></script>
@@ -50,9 +53,11 @@
                 <nav class="navbar bg-transparent">
                     <form autocomplete="off">
                         <div id="autocomplete" class="float-left">
-                            <input class="form-control" type="search" placeholder="I choose you!" aria-label="Search" id="pokesearch">
+                            <input class="form-control" type="search" placeholder="I choose you!" aria-label="Search"
+                                id="pokesearch">
                         </div>
-                        <button class="btn float-left btn-without-border" type="submit" id="btn-submit"><img src="assets/images/pokeball.png"></button>
+                        <button class="btn float-left btn-without-border" type="submit" id="btn-submit"><img
+                                src="assets/images/pokeball.png"></button>
                     </form>
                 </nav>
             </div>
@@ -65,57 +70,9 @@
                 </div>
             </div>
             <div class="col col-xs-6 d-flex justify-content-center">
-                <div class="container" id="stats">
-                    <ul>
-                        <li>
-                            <p>Attack</p>
-                            <div class="progress">
-                                <div class="progress-bar" id="attack" role="progressbar" aria-valuenow="0"
-                                    aria-valuemin="0" aria-valuemax="255"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <p>Special Attack</p>
-                            <div class="progress">
-                                <div class="progress-bar" id="special-attack" role="progressbar" aria-valuenow="0"
-                                    aria-valuemin="0" aria-valuemax="255"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <p>Defense</p>
-                            <div class="progress">
-                                <div class="progress-bar" id="defense" role="progressbar" aria-valuenow="0"
-                                    aria-valuemin="0" aria-valuemax="255"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <p>Special Defense</p>
-                            <div class="progress">
-                                <div class="progress-bar" id="special-defense" role="progressbar" aria-valuenow="0"
-                                    aria-valuemin="0" aria-valuemax="255"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <p>Hit Points</p>
-                            <div class="progress">
-                                <div class="progress-bar" id="hp" role="progressbar" aria-valuenow="0" aria-valuemin="0"
-                                    aria-valuemax="255"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <p>Speed</p>
-                            <div class="progress">
-                                <div class="progress-bar" id="speed" role="progressbar" aria-valuenow="0"
-                                    aria-valuemin="0" aria-valuemax="255"></div>
-                            </div>
-                        </li>
-                    </ul>
-
-
-
-
-
-
+                <div class="container-fluid" id="stats">
+                    <div id="chart">
+                    </div>
                 </div>
             </div>
         </div>

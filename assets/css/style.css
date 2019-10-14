@@ -12,6 +12,9 @@ body{
     padding-right: 10px;
 }
 
+#autocomplete{
+    padding: 18px 0;
+}
 #bball{
     padding-top: 20px;
 }
@@ -33,9 +36,8 @@ body{
 }
 
 #stats{
-    height: auto;
-    width: 250px;
-    color: yellow;
+    height: 400px;
+    width: 400px;
 }
 
 .border-right { 

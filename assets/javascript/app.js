@@ -2,7 +2,6 @@ $(document).ready(function(){
     // When submit button is clicked, send API call to pokeapi and giphy then clear the input value
     $("#btn-submit").on("click", function () {
         searchpokemon();
-        requestingPokemonGif();
         $("#pokesearch").val("");
     });
 
