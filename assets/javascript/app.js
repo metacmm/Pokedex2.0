@@ -1,7 +1,6 @@
 $(document).ready(function(){
-    $("#btn-submit").on("click", function () {
-        searchpokemon();
-    });
+    getPokemonNames();
+    $("#btn-submit").on("click", searchpokemon);
     $("#pokesearch").on("input",autocomplete);
     $(".balls").on("click", function() {
         window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");

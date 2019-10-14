@@ -12,6 +12,9 @@ body{
     padding-right: 10px;
 }
 
+#autocomplete{
+    padding: 18px 0;
+}
 #bball{
     padding-top: 20px;
 }
