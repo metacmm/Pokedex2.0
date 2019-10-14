@@ -9,5 +9,8 @@ function getPokemonNames() {
         for (var i = 0; i < response.results.length; i++) {
             pokemons.push(response.results[i].name);
         }
+        for (var i = 0; i < response.results.length; i++){
+            pokemons.push(i.toString());
+        }
     });
 }
