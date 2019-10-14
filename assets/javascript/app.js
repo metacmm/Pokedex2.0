@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    getPokemonNames();
     $("#btn-submit").on("click", searchpokemon);
     $("#btn-submit").on("click", requestingPokemonGif);
     $("#pokesearch").on("input",autocomplete);
