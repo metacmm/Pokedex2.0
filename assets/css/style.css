@@ -33,15 +33,9 @@ body{
 }
 
 #stats{
-<<<<<<< HEAD
     height: 400px;
     width: 400px;
     background-color: darkgray;
-=======
-    height: auto;
-    width: 250px;
-    color: yellow;
->>>>>>> c1dc38d5bc5dff29e399b55869ab22bd77f6bf9b
 }
 
 .border-right { 

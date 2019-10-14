@@ -37,9 +37,16 @@ function updateStats(pokemon) {
         }],
         labels: labels,
     };
+
+    $("#statChart").empty();
+
+    var statChart = $("<canvas>");
+    statChart.attr({ "width": "800", "height": "800", "id": "statChart" });
+    $("#chart").append(statChart);
+
     var ctx = $("#statChart");
 
-    new Chart(ctx, {
+    var statChart = new Chart(ctx, {
         data: statData,
         type: 'horizontalBar',
         options: {
