@@ -12,51 +12,31 @@ function displayPokemon(pokemon) {
 
 function updateStats(pokemon) {
 
-    var data = [];
-    var labels = [];
+    google.charts.load('current', { 'packages': ['corechart'] });
 
-    pokemon.stats.forEach(element => {
-        let name = element.stat["name"];
-        labels.push(name);
+    google.charts.setOnLoadCallback(drawChart);
 
-        let value = element["base_stat"];
-        data.push(value);
-    })
+    function drawChart() {
 
-    var statData = {
-        datasets: [{
-            data: data,
-            backgroundColor: [
-                "#FF6384",
-                "#4BC0C0",
-                "#FFCE56",
-                "#E7E9ED",
-                "#36A2EB"
-            ],
-            label: 'Pokemon Stats' // for legend
-        }],
-        labels: labels,
-    };
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Stat');
+        data.addColumn('number', 'Value');
 
-    $("#statChart").empty();
+        pokemon.stats.forEach(element => {
+            data.addRows([
+                [element.stat["name"], element["base_stat"]]
+            ]);
+        })
 
-    var statChart = $("<canvas>");
-    statChart.attr({ "width": "800", "height": "800", "id": "statChart" });
-    $("#chart").append(statChart);
+        var options = {
+            'title': 'Statistics',
+            'width': 400,
+            'height': 300,
+            'legend': {position: 'none'}
+        };
 
-    var ctx = $("#statChart");
-
-    var statChart = new Chart(ctx, {
-        data: statData,
-        type: 'horizontalBar',
-        options: {
-            scales: {
-                xAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
-            }
-        }
-    });
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.BarChart(document.getElementById('chart'));
+        chart.draw(data, options);
+    }
 }
