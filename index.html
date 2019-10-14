@@ -32,6 +32,8 @@
     <script src="assets/javascript/autocomplete.js"></script>
     <script src="assets/javascript/pokemons.js"></script>
     <script src="assets/javascript/getrecommendation.js"></script>
+    <script src="assets/javascript/giphyPokemonAPI.js"></script>
+
 
     <title>Pokedex 2.0!</title>
 </head>
@@ -60,29 +62,76 @@
         </div>
     </div>
     <div class="container">
-        <div class="row mb-4">
+        <div class="row">
             <div class="col col-xs-6 border-right d-flex justify-content-center" id="spritecont">
                 <div class="flex-column d-flex justify-content-center" id="sprite">
                 </div>
             </div>
             <div class="col col-xs-6 d-flex justify-content-center">
+<<<<<<< HEAD
                 <div class="container-fluid" id="stats">
                     <div id="chart">
                         <canvas id="statChart" width="800" height="800"></canvas>
                     </div>
+=======
+                <div class="container" id="stats">
+                    <ul>
+                        <li>
+                            <p>Attack</p>
+                            <div class="progress">
+                                <div class="progress-bar" id="attack" role="progressbar" aria-valuenow="0"
+                                    aria-valuemin="0" aria-valuemax="255"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p>Special Attack</p>
+                            <div class="progress">
+                                <div class="progress-bar" id="special-attack" role="progressbar" aria-valuenow="0"
+                                    aria-valuemin="0" aria-valuemax="255"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p>Defense</p>
+                            <div class="progress">
+                                <div class="progress-bar" id="defense" role="progressbar" aria-valuenow="0"
+                                    aria-valuemin="0" aria-valuemax="255"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p>Special Defense</p>
+                            <div class="progress">
+                                <div class="progress-bar" id="special-defense" role="progressbar" aria-valuenow="0"
+                                    aria-valuemin="0" aria-valuemax="255"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p>Hit Points</p>
+                            <div class="progress">
+                                <div class="progress-bar" id="hp" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                                    aria-valuemax="255"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p>Speed</p>
+                            <div class="progress">
+                                <div class="progress-bar" id="speed" role="progressbar" aria-valuenow="0"
+                                    aria-valuemin="0" aria-valuemax="255"></div>
+                            </div>
+                        </li>
+                    </ul>
+
+
+
+
+
+
+>>>>>>> c1dc38d5bc5dff29e399b55869ab22bd77f6bf9b
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col col-xs-12 d-flex justify-content-center" id="gifs">
-                <div>
-                    <li>Test</li>
-                </div>
-                <div>
-                    <li>Test</li>
-                </div>
-                <div>
-                    <li>Test</li>
+            <div class="container">
+                <div class="col col-xs-12 d-flex justify-content-center" id="gifs">
                 </div>
             </div>
         </div>

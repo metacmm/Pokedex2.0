@@ -1,43 +1,34 @@
-var searchText = "";
-
-function displayPokemonGif(){
-    $("#gifs-view").empty();
-};
-
-$("#btn-submit").on("click", function(){
-    requestingPokemonGif(this);
-});
-
-function requestingPokemonGif(button){
-    searchText = $(button).attr("data-name");
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchText + "&api_key=fAd8nhiRNR2VtraFeMkS7t2FaNyqITEclimit=4";
+function requestingPokemonGif(){
+    var searchText = $("#pokesearch").val().trim();
+    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=Bk5QuTfcpPza5xYFYcMKbn1rl0kIDzw6&q=" + searchText + "&limit=4";
 
     $.ajax({
         url: queryURL,
-        method: "GET",
+        method: "GET"
     })
     .then(function(response){
-        console.log(queryURL);
         console.log(response);
 
         var pokemonGifResults = response.data;
         console.log(pokemonGifResults);
+        $("#gifs").empty();
+        showPokemonGif();
+
+        function showPokemonGif() {
+            for (var i = 0; i < pokemonGifResults.length; i++) {
+                
+                    var gifDiv = $("<div>");
+
+
+                    var gifURL = pokemonGifResults[i].images.fixed_height.url;
+                    var selectedPokemon = $("<img>");
+
+                    selectedPokemon.attr("src", gifURL);
+                    gifDiv.append(selectedPokemon);
+                    
+                    $("#gifs").prepend(gifDiv);
+            
+            };
+        };
     });
-};
-
-function showPokemonGif(){
-    for (var i = 0; i < pokemonGifResults.length; i++){
-        if(pokemonGifResults[i].rating !== "r") {
-            var gifDiv = $("<div>");
-            console.log("for loop");
-
-            var gifURL = pokemonGifResults[i].images.fixed_height.url;
-            var selectedPokemon = $("<img>");
-
-            selectedPokemon.attr("src", gifURL);
-            gifDiv.append(selectedPokemon);
-
-            $("#gifs-view").prepend(gifDiv);
-        }
-    };
 };

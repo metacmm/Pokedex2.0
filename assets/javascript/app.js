@@ -1,7 +1,12 @@
 $(document).ready(function(){
+<<<<<<< HEAD
     $("#btn-submit").on("click", function () {
         searchpokemon();
     });
+=======
+    $("#btn-submit").on("click", searchpokemon);
+    $("#btn-submit").on("click", requestingPokemonGif);
+>>>>>>> c1dc38d5bc5dff29e399b55869ab22bd77f6bf9b
     $("#pokesearch").on("input",autocomplete);
     $(".balls").on("click", function() {
         window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
