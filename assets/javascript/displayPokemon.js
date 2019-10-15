@@ -2,7 +2,8 @@ function displayPokemon(pokemon) {
     //console.log(pokemon);
     // add code to update UI elements here
     updateStats(pokemon);
-
+    
+    $("#pokesearch").val("");
     var pokimage = $("<img class='mx-auto border border-dark'>");
     pokimage.attr("src", pokemon.sprites.front_default);
     $("#sprite").empty();

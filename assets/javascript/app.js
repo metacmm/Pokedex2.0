@@ -1,16 +1,9 @@
 $(document).ready(function(){
-<<<<<<< HEAD
-    getPokemonNames();
-=======
     // Load pokemon names
     getPokemonNames();
 
->>>>>>> 4d41b7f1c63be95aa36ef77593096f8dd86056a6
     // When submit button is clicked, send API call to pokeapi and giphy then clear the input value
-    $("#btn-submit").on("click", function () {
-        searchpokemon();
-        $("#pokesearch").val("");
-    });
+    $("#btn-submit").on("click", searchpokemon);
 
     // When a user begins to type in the input element, use autocomplete
     $("#pokesearch").on("input", autocomplete);
