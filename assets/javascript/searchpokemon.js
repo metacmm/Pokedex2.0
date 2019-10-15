@@ -7,6 +7,7 @@ function searchpokemon() {
         method: "GET",
         error: function(e){
             console.log(e);
+            $("#pokesearch").val("");
         },
         success: function(response){
             displayPokemon(response);
