@@ -55,3 +55,7 @@ function updateStats(pokemon) {
         chart.draw(data, options);
     }
 }
+
+function updateDescription(flavorText){
+    //add code to update the description text
+}

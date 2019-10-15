@@ -1,6 +1,7 @@
 function requestingPokemonGif(searchText){
+    var searchQuery = searchText + "  pokemon";
     //var searchText = $("#pokesearch").val().trim();
-    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=Bk5QuTfcpPza5xYFYcMKbn1rl0kIDzw6&q=" + searchText + "&limit=4";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=Bk5QuTfcpPza5xYFYcMKbn1rl0kIDzw6&q=" + searchQuery + "&limit=4&rating=g&rating=pg";
 
     $.ajax({
         url: queryURL,
@@ -16,10 +17,7 @@ function requestingPokemonGif(searchText){
 
         function showPokemonGif() {
             for (var i = 0; i < pokemonGifResults.length; i++) {
-                
                     var gifDiv = $("<div>");
-
-
                     var gifURL = pokemonGifResults[i].images.fixed_height.url;
                     var selectedPokemon = $("<img>");
 
@@ -27,7 +25,6 @@ function requestingPokemonGif(searchText){
                     gifDiv.append(selectedPokemon);
                     
                     $("#gifs").prepend(gifDiv);
-            
             };
         };
     });
