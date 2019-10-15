@@ -17,9 +17,8 @@ function requestingPokemonGif(searchText){
         function showPokemonGif() {
             for (var i = 0; i < pokemonGifResults.length; i++) {
                 
+                if(pokemonGifResults[i].rating !== "r"){ 
                     var gifDiv = $("<div>");
-
-
                     var gifURL = pokemonGifResults[i].images.fixed_height.url;
                     var selectedPokemon = $("<img>");
 
@@ -27,7 +26,7 @@ function requestingPokemonGif(searchText){
                     gifDiv.append(selectedPokemon);
                     
                     $("#gifs").prepend(gifDiv);
-            
+                }
             };
         };
     });
