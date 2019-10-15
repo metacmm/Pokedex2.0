@@ -29,9 +29,11 @@ body{
     box-shadow: none !important;
 }
 
+#pokemon-name {
+    color: white;
+}
+
 #sprite{
-    height: 250px;
-    width: 250px;
     background-color: rgba(245, 245, 245, 0.774);
 }
 

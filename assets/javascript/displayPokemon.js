@@ -3,10 +3,19 @@ function displayPokemon(pokemon) {
     // add code to update UI elements here
     updateStats(pokemon);
 
-    var pokimage = $("<img class='mx-auto border border-dark'>");
-    pokimage.attr("src", pokemon.sprites.front_default);
-    $("#sprite").empty();
-    $("#sprite").prepend(pokimage);
+    $("#pokemon-name").text(pokemon.name);
+
+    let pokemonTypeString = "";
+    pokemon.types.forEach(type => {
+        console.log(type);
+        pokemonTypeString += (" " + type.type.name);
+    });
+    $("#pokemon-type").text(pokemonTypeString);
+
+    $("#pokemon-height").text("Height: " + pokemon.height)
+    $("#pokemon-weight").text("Weight: " + pokemon.weight)
+
+    $("#sprite").attr("src", pokemon.sprites.front_default);
 }
 
 function updateStats(pokemon) {
