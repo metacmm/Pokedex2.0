@@ -3,7 +3,8 @@ function displayPokemon(pokemon) {
     // add code to update UI elements here
     updateStats(pokemon);
 
-    $("#pokemon-name").text(pokemon.name);
+    let name = capitalizeFirstLetter(pokemon.name);
+    $("#pokemon-name").text(name);
 
     getDescription(pokemon.species.url);
 
@@ -61,4 +62,13 @@ function updateStats(pokemon) {
         var chart = new google.visualization.BarChart(document.getElementById('chart'));
         chart.draw(data, options);
     }
+}
+
+function updateDescription(description){
+    $("#pokemon-description").text(description);
+}
+
+// s/o stackoverflow
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }

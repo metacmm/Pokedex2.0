@@ -14,7 +14,3 @@ function getDescription(requestUrl){
         updateDescription(description);
     });
 }
-
-function updateDescription(description){
-    $("#pokemon-description").text(description);
-}
