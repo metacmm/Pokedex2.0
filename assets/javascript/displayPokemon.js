@@ -34,15 +34,16 @@ function updateStats(pokemon) {
 
     function drawChart() {
 
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Stat');
-        data.addColumn('number', 'Value');
+        let dataTable = [
+            ['Stat', 'Value', { role: 'style' }],
+        ]
 
         pokemon.stats.forEach(element => {
-            data.addRows([
-                [element.stat["name"], element["base_stat"]]
-            ]);
+            let row = [element.stat["name"], element["base_stat"], getColor(element.stat["name"])];
+            dataTable.push(row);
         })
+
+        var data = new google.visualization.arrayToDataTable(dataTable);
 
         var options = {
             'title': 'Statistics',
@@ -64,11 +65,33 @@ function updateStats(pokemon) {
     }
 }
 
-function updateDescription(description){
+function updateDescription(description) {
     $("#pokemon-description").text(description);
 }
 
 // s/o stackoverflow
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+// get color
+function getColor(name) {
+    if (name == "attack") {
+        return "red";
+    }
+    else if (name == "special-attack") {
+        return "magenta";
+    }
+    else if (name == "defense") {
+        return "blue";
+    }
+    else if (name == "special-defense") {
+        return "navy";
+    }
+    else if (name == "speed") {
+        return "pink";
+    }
+    else if (name == "hp") {
+        return "green";
+    }
 }
