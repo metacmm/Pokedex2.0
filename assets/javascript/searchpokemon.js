@@ -12,6 +12,7 @@ function searchpokemon() {
         success: function(response){
             displayPokemon(response);
             requestingPokemonGif(response.name);
+            getDescription(response.species.url);
         }
     });
 
