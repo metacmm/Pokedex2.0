@@ -2,7 +2,7 @@ function displayPokemon(pokemon) {
     //console.log(pokemon);
     // add code to update UI elements here
     updateStats(pokemon);
-    
+
     $("#pokesearch").val("");
     var pokimage = $("<img class='mx-auto border border-dark'>");
     pokimage.attr("src", pokemon.sprites.front_default);
@@ -46,4 +46,8 @@ function updateStats(pokemon) {
         var chart = new google.visualization.BarChart(document.getElementById('chart'));
         chart.draw(data, options);
     }
+}
+
+function updateDescription(flavorText){
+    //add code to update the description text
 }
