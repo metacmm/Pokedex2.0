@@ -3,7 +3,18 @@ function getDescription(requestUrl){
         url: requestUrl,
         method: "GET"
     }).then(function(response){
-        console.log(response.flavor_text_entries);
-        updateDescription(response.flavor_text_entries);
+        let description = "";
+        for (element of response.flavor_text_entries) {
+            if (element.language.name == "en") {
+                description += element.flavor_text;
+                break;
+            }
+        }
+        console.log(description);
+        updateDescription(description);
     });
+}
+
+function updateDescription(description){
+    $("#pokemon-description").text(description);
 }

@@ -3,11 +3,26 @@ function displayPokemon(pokemon) {
     // add code to update UI elements here
     updateStats(pokemon);
 
-    $("#pokesearch").val("");
-    var pokimage = $("<img class='mx-auto border border-dark'>");
-    pokimage.attr("src", pokemon.sprites.front_default);
-    $("#sprite").empty();
-    $("#sprite").prepend(pokimage);
+    $("#pokemon-name").text(pokemon.name);
+
+    getDescription(pokemon.species.url);
+
+    let pokemonTypeString = "Type: ";
+
+    for (let i = 0; i < pokemon.types.length; i++) {
+        pokemonTypeString += (" " + pokemon.types[i].type.name);
+
+        if (i != (pokemon.types.length - 1)) {
+            pokemonTypeString += ",";
+        }
+
+    }
+    $("#pokemon-type").text(pokemonTypeString);
+
+    $("#pokemon-height").text("Height: " + pokemon.height)
+    $("#pokemon-weight").text("Weight: " + pokemon.weight)
+
+    $("#sprite").attr("src", pokemon.sprites.front_default);
 }
 
 function updateStats(pokemon) {
@@ -32,22 +47,18 @@ function updateStats(pokemon) {
             'title': 'Statistics',
             'width': 400,
             'height': 300,
-            'legend': {position: 'none'},
+            'legend': { position: 'none' },
             'animation': {
                 startup: 'true',
                 duration: '1000',
                 easing: 'inAndOut',
 
             },
-            hAxis: { ticks: [25,50,100,150, 200, 255] }
+            hAxis: { ticks: [25, 50, 100, 150, 200, 255] }
         };
 
         // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.BarChart(document.getElementById('chart'));
         chart.draw(data, options);
     }
-}
-
-function updateDescription(flavorText){
-    //add code to update the description text
 }
