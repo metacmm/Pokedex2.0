@@ -17,7 +17,7 @@ function autocomplete() {
 
     //if no matched pokemon found
     if (arr.length === 0){
-        var b = $("<li> no matching pokemon founded </li>");
+        var b = $("<li> no matching pokemon found </li>");
         b.addClass("list-group-item list-group-item-action disabled");
         b.on("click", function(){
             inp.val("");
