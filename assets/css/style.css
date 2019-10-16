@@ -46,6 +46,10 @@ body{
     background-color: rgba(245, 245, 245, 0.774);
 }
 
+#name {
+    justify-content: center;
+}
+
 #stats{
     height: 400px;
     width: 400px;

@@ -10,6 +10,40 @@ function displayPokemon(pokemon) {
     let name = capitalizeFirstLetter(pokemon.name);
     $("#pokemon-name").text(name);
 
+    let sprites = pokemon.sprites;
+    let spriteURLs = Object.values(sprites);
+
+    $(".carousel-inner").empty();
+
+    for (let i = 0; i < spriteURLs.length; i++) {
+        let li = $("<li>");
+        li.attr({
+            "data-target":"#myCarousel",
+            "data-slide-to":i,
+        })
+
+        let div = $("<div>");
+
+        if (i == 0) {
+            div.addClass("carousel-item active");
+            li.addClass("active");
+        }
+        else {
+            div.addClass("carousel-item");
+        }
+
+        $(".carousel-indicators").append(li);
+        
+        let img = $("<img>");
+        img.addClass("d-block w-100");
+        img.attr("src", spriteURLs[i]);
+        div.append(img);
+
+        $(".carousel-inner").append(div);
+    }
+
+    $("#sprite").attr("src", pokemon.sprites.front_default);
+
     getDescription(pokemon.species.url);
 
     let pokemonTypeString = "Type: ";
@@ -26,8 +60,6 @@ function displayPokemon(pokemon) {
 
     $("#pokemon-height").text("Height: " + pokemon.height)
     $("#pokemon-weight").text("Weight: " + pokemon.weight)
-
-    $("#sprite").attr("src", pokemon.sprites.front_default);
 
     setAnimation();
 }
@@ -104,7 +136,7 @@ function getColor(name) {
 
 // set animation of the big blue ball to glow for 5 seconds
 function setAnimation() {
-    
+
     if (isGlowing) {
         console.log("is glowing.");
         clearTimeout(timeoutId);
@@ -116,5 +148,5 @@ function setAnimation() {
         isGlowing = false;
     }, 6000);
 
-    isGlowing = true;   
+    isGlowing = true;
 }
