@@ -1,3 +1,7 @@
+//Global varaible for big blue ball glowing
+var isGlowing = false;
+var timeoutId;
+
 function displayPokemon(pokemon) {
     //console.log(pokemon);
     // add code to update UI elements here
@@ -24,6 +28,8 @@ function displayPokemon(pokemon) {
     $("#pokemon-weight").text("Weight: " + pokemon.weight)
 
     $("#sprite").attr("src", pokemon.sprites.front_default);
+
+    setAnimation();
 }
 
 function updateStats(pokemon) {
@@ -94,4 +100,21 @@ function getColor(name) {
     else if (name == "hp") {
         return "green";
     }
+}
+
+// set animation of the big blue ball to glow for 5 seconds
+function setAnimation() {
+    
+    if (isGlowing) {
+        console.log("is glowing.");
+        clearTimeout(timeoutId);
+    };
+    $("#bball").addClass("glowball");
+    //set timeout to 6s to have the ball glow twice
+    timeoutId = setTimeout(function () {
+        $("#bball").removeClass("glowball");
+        isGlowing = false;
+    }, 6000);
+
+    isGlowing = true;   
 }
