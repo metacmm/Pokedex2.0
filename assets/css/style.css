@@ -15,13 +15,15 @@ body{
 
 #autocomplete{
     padding: 18px 0;
+    position: relative;
+    z-index: 1;
 }
 #bball{
     padding-top: 20px;
 }
 
 #pokesearch{
-    margin-right: 5px;
+    margin-right: 0px;
 }
 
 
@@ -57,4 +59,8 @@ body{
 .autocomplete-items{
     max-height: 300px;
     overflow: auto;
+}
+
+#top-nav{
+    height:150px;
 }
