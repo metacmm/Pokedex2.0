@@ -5,18 +5,74 @@ body{
 .container{
     align-items: center;
     padding-top: 5px;
-}
-
-#balls{
-    padding-left: 20px;
-    padding-right: 10px;
-}
-
-#bball{
     padding-top: 20px;
 }
 
+.balls{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 70px;
+}
+
+#autocomplete{
+    padding: 18px 0;
+    position: relative;
+    z-index: 1;
+}
+
+#bball{
+    border-radius: 100%;
+}
+
+.glowball{
+    box-shadow: 0px 0px 9px 4px #747DE8;
+   animation: glowBall 1.5s linear infinite alternate;
+}
+
 #pokesearch{
-    width: 500px;
-    margin-right: 5px;
+    margin-right: 0px;
+}
+
+.btn:active, .btn:focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#pokemon-name, #information {
+    color: white;
+}
+
+#sprite{
+    background-color: rgba(245, 245, 245, 0.774);
+}
+
+#stats{
+    height: 400px;
+    width: 400px;
+}
+
+.border-right { 
+    border-width: 5px !important; 
+    border-color: whitesmoke !important;
+}
+
+@media (min-width: 980px){
+    #pokesearch{
+        width: 500px;
+    }
+}
+
+.autocomplete-items{
+    max-height: 300px;
+    overflow: auto;
+}
+
+#top-nav{
+    height:150px;
+}
+
+@keyframes glowBall{
+    to{
+        box-shadow: 0px 0px 35px 15px #535FED;
+    }
 }

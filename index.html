@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--Bootstrap and CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -19,35 +22,88 @@
     <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
 
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
     <!-- Person Javascript -->
     <script src="assets/javascript/app.js"></script>
     <script src="assets/javascript/searchpokemon.js"></script>
+    <script src="assets/javascript/displayPokemon.js"></script>
+    <script src="assets/javascript/autocomplete.js"></script>
+    <script src="assets/javascript/pokemons.js"></script>
+    <script src="assets/javascript/getrecommendation.js"></script>
+    <script src="assets/javascript/giphyPokemonAPI.js"></script>
+    <script src="assets/javascript/getDescription.js"></script>
 
     <title>Pokedex 2.0!</title>
 </head>
+
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-1">
+        <div class="row" id="top-nav">
+            <div class="col-xs-3 pt-3">
                 <img src="assets/images/blue-ball.png" id="bball">
+                <img src="assets/images/red-ball.png" class="balls">
+                <img src="assets/images/yellow-ball.png" class="balls">
+                <img src="assets/images/green-ball.png" class="balls">
             </div>
-            <div class="col-3">
-                <img src="assets/images/red-ball.png" id="balls">
-                <img src="assets/images/yellow-ball.png" id="balls">
-                <img src="assets/images/green-ball.png" id="balls">
+            <div class="col-xs-8 pl-5">
+                <form autocomplete="off" class="my-auto">
+                    <div id="autocomplete" class="float-left">
+                        <input class="form-control" type="search" placeholder="I choose you!" aria-label="Search"
+                            id="pokesearch">
+                    </div>
+                    <button class="btn float-left btn-without-border" type="submit" id="btn-submit"><img
+                            src="assets/images/pokeball.png"></button>
+                </form>
             </div>
-            <div class="col-8">     
-                <nav class="navbar bg-transparent">
-                    <form class="form-inline">
-                        <input class="form-control" type="search" placeholder="I choose you!" aria-label="Search" id="pokesearch">
-                        <button class="btn" type="submit" id="btn-submit"><img src="assets/images/pokeball.png"></button>
-                    </form>
-      
-                </nav>
-            </div>
-            
         </div>
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-6 border-right d-flex justify-content-center" id="spritecont">
+                <div class="row" id="title">
+                    <div class="col col-xs-8">
+                        <h1 id="pokemon-name"></h1>
+                    </div>
+                    <div class="col col-xs-4 justify-content-center">
+                        <img class='mx-auto border border-dark' scr="" id="sprite">
+                    </div>
 
+                    <div id="information">
+                        <div class="col col-xs-12 col-md-12 info">
+                            <p id="pokemon-description"></p>
+                        </div>
+                        <div class="col col-xs-12 info">
+                            <h3 id="pokemon-type">
+                                </h4>
+                        </div>
+                        <div class="col col-xs-6 info">
+                            <h4 id="pokemon-height"></h4>
+                        </div>
+                        <div class="col col-xs-6 info">
+                            <h4 id="pokemon-weight"></h4>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div></div>
+            </div>
+            <div class="col col-xs-6 d-flex justify-content-center">
+                <div class="container-fluid" id="stats">
+                    <div id="chart">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="col col-xs-12 d-flex justify-content-center" id="gifs">
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
