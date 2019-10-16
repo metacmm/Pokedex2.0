@@ -4,8 +4,8 @@ body{
 
 .container{
     align-items: center;
-    padding-top: 5px;
     padding-top: 20px;
+    margin-bottom: 5px;
 }
 
 .balls{
@@ -53,7 +53,7 @@ body{
 
 .border-right { 
     border-width: 5px !important; 
-    border-color: whitesmoke !important;
+    border-color: white !important;
 }
 
 @media (min-width: 980px){
@@ -75,4 +75,9 @@ body{
     to{
         box-shadow: 0px 0px 35px 15px #535FED;
     }
+}
+
+.pokegif {
+    margin-right: 3px;
+    overflow: auto;
 }

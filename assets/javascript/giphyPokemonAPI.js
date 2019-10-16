@@ -22,6 +22,7 @@ function requestingPokemonGif(searchText){
                     var selectedPokemon = $("<img>");
 
                     selectedPokemon.attr("src", gifURL);
+                    selectedPokemon.addClass("pokegif")
                     gifDiv.append(selectedPokemon);
                     
                     $("#gifs").prepend(gifDiv);
