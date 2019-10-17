@@ -7,6 +7,7 @@ function displayPokemon(pokemon) {
     // add code to update UI elements here
     updateStats(pokemon);
 
+    $("#pokesearch").val("");
     let name = capitalizeFirstLetter(pokemon.name);
     $("#pokemon-name").text(name);
 
